@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="FCC Survey Project">
+    <meta name="keywords" content="Freecodecamp, responsive-web-design, project, survey">
+    <meta name="author" content="Michael J Peppers <mcgdevfunk824@protonmail.com>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>
+
+
+<a id="github-link" href="https://github.com/McGdevfunk824" target="_blank"></a>
+
+<header>
+    <h1 id="title">Satisfaction Survey</h1>
+</header>
+
+<div id="form-content">
+    <p id="description">
+        Help improve our products
+    </p>
+    <hr id="form-top" />
+    <form id="survey-form">
+        <div class="tabRow">
+            <div class="labels">
+                <label id="name-label" for="name">Name: </label>
+            </div>
+            <div class="tabRight">
+                <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your full-name" required>
+            </div>
+        </div>
+        <div class="tabRow">
+            <div class="labels">
+                <label id="email-label" for="email">Email: </label>
+            </div>
+            <div class="tabRight">
+                <input type="email" name="email" id="email" class="input-field" placeholder="Enter your E-mail" required>
+            </div>
+        </div>
+        <div class="tabRow">
+            <div class="labels">
+                <label id="number-label" for="age">Age: </label>
+            </div>
+            <div class="tabRight">
+                <input type="number" name="age" id="number" min="18" max="125" class="input-field" placeholder="Age" required>
+            </div>
+        </div>
+        <div class="tabRow">
+            <div class="labels">
+                <label for="youNow">Which of these would best describe you?</label>
+            </div>
+            <div class="tabRight">
+                <select id="dropdown" name="youNow" class="dropdown">
+                    <option disabled value>Choose One</option>
+                    <option value="student">Student</option>
+                    <option value="work">Employed</option>
+                    <option value="nowork">Unemployed</option>
+                    <option value="noSay">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="tabRow">
+            <div class="labels">
+                <label for="userRatings">How likely are you to recommend our products to friends/family?</label>
+            </div>
+            <div class="tabRight">
+                <ul style="list-style: none;">
+                    <li class="radio"><label>I am very likely to recommend you<input name="radio-buttons" value="1" type="radio" class="userRatings" ></label></li>
+                    <li class="radio"><label>I am undecided<input name="radio-buttons" value="2" type="radio" class="userRatings" ></label></li>
+                    <li class="radio"><label>I would not recommend you<input name="radio-buttons" value="3" type="radio" class="userRatings" ></label></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tabRow">
+            <div class="labels">
+                <label for="like-most">What product did you purchase?: </label>
+            </div>
+            <div class="tab-right">
+                <select id="like-most" name="likemost" class="dropdown">
+                    <option disabled selected value>Pick One</option>
+                    <option value="shoes">Shoes</option>
+                    <option value="casual">Casual Attire</option>
+                    <option value="dress">Dress Attire</option>
+                    <option value="access">Accessories</option>
+                </select>
+            </div>
+        </div>
+        <div class="tabRow">
+            <div class="labels">
+                <label for="improvement">What could we improve about our products<br> (Check all that apply): </label>
+            </div>
+            <div class="tabRight">
+                <ul id="improvement" style="list-style: none;">
+                    <li class="checkbox"><label><input name="improve" value="1" type="checkbox" class="userRatings">More sales</label></li>
+                    <li class="checkbox"><label><input name="improve" value="2" type="checkbox" class="userRatings">New product lines</label></li>
+                    <li class="checkbox"><label><input name="improve" value="3" type="checkbox" class="userRatings">Better quality materials</label></li>
+                    <li class="checkbox"><label><input name="improve" value="4" type="checkbox" class="userRatings">Faster shipping</label></li>
+                    <li class="checkbox"><label><input name="improve" value="5" type="checkbox" class="userRatings">Lower prices</label></li>
+                    <li class="checkbox"><label><input name="improve" value="6" type="checkbox" class="userRatings">Seasonal products</label></li>
+                    <li class="checkbox"><label><input name="improve" value="7" type="checkbox" class="userRatings">Customer service</label></li>
+                    <li class="checkbox"><label><input name="improve" value="8" type="checkbox" class="userRatings">Advertisement</label></li>
+                    <li class="checkbox"><label><input name="improve" value="9" type="checkbox" class="userRatings">Variety of sizes</label></li>
+                    <li class="checkbox"><label><input name="improve" value="10" type="checkbox" class="userRatings">More color options</label></li>
+                    <li class="checkbox"><label><input name="improve" value="11" type="checkbox" class="userRatings">Insider rewards</label></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tabRow">
+            <div class="labels">
+                <label for="comments">Any Comments or Concerns?</label>
+            </div>
+            <div class="tabRight">
+                <textarea id="comments" class="input-field" style="height:50px;resize:verticle;" name="comment" placeholder="Enter comments here"></textarea>
+            </div>
+        </div>
+        <button id="submit" type="submit">Submit</button>
+    </form>
+</div>
+
+<script src="App.js"></script>
+
+</html>
